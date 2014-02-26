@@ -5,19 +5,16 @@ $(document).ready(function(){
 	Backbone.history.start();
 
 
-$.ajax({
+// $.ajax({
 
-  dataType: 'jsonp',
+//   dataType: 'jsonp',
 
-  url:'',
+//   url:'',
+
+// });
+
+// router = new MainRouter();
+
+// Backbone.history.start(); 
 
 });
-
-router = new MainRouter();
-
-Backbone.history.start(); 
-
-});
-
-
-})

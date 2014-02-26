@@ -38,34 +38,43 @@
             </div>
 
             <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
+                <h1>Soundcloud Playlists</h1>
+                <p><a class="btn btn-lg btn-success" href="#folk">Enter</a></p>
             </div>
 
             <div class="row marketing">
-                <div class="col-lg-6">
-                </div>
+                
             </div>
 
-           
 
         </div>
 
 
+        <script type="text/template" id="genre-template">
+          <p><a class="btn btn-lg btn-success" href="#folk/listen">Listen!</a></p>
+        </script>
+
+        <script type="text/template" id="music"></script>
 
 
-        <script src="http://connect.soundcloud.com/sdk.js"></script>
-        <script>
-        SC.initialize({
-          client_id: 'f0e13cb56a5f2167ba15f11f0448f8cb'
-        });
+
+
+
+        // <script src="http://connect.soundcloud.com/sdk.js"></script>
+        // <script>
+        // SC.initialize({
+        //   client_id: 'f0e13cb56a5f2167ba15f11f0448f8cb'
+        // });
 
         // find all tracks with the genre 'punk' that have a tempo greater than 120 bpm.
-        SC.get('/tracks', { genres: 'punk', bpm: { from: 120 } }, function(tracks) {
-          console.log(tracks);
-        });
-        </script>
+        // SC.get('/tracks', { genres: 'punk', bpm: { from: 120 } }, function(tracks) {
+        //   console.log(tracks);
+        // });
+        // </script>
+
+
+
+
 
         <!-- TOKEN -->
 
@@ -75,6 +84,8 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -104,6 +115,11 @@
         <!-- endbuild -->
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/models.js"></script>
+        <script src="scripts/list-view.js"></script>
+        <script src="scripts/genre-view.js"></script>
+        <script src="scripts/models.js"></script>
+        <script src="scripts/router.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
